@@ -10,9 +10,9 @@ interface IProps {
 function App(props: IProps) {
 	const { name, age } = props
 	return (
-  <div className='app'>
-    <span>{`测试=>我是${name}: ${age}岁`}</span>
-  </div>
+		<div className="app">
+			<span>{`测试=>我是${name}: ${age}岁`}</span>
+		</div>
 	)
 }
 

@@ -90,7 +90,6 @@ module.exports = {
 
 		'react/jsx-filename-extension': [ERROR, { extensions: ['.tsx', 'ts', '.jsx', 'js'] }],
 		'react/jsx-indent-props': [ERROR, 2],
-		'react/jsx-indent': [ERROR, 2],
 		'react/jsx-one-expression-per-line': OFF,
 		'react/destructuring-assignment': OFF,
 		'react/state-in-constructor': OFF,
@@ -109,7 +108,6 @@ module.exports = {
 		'no-plusplus': OFF,
 		'no-console': OFF,
 		'class-methods-use-this': ERROR,
-		'jsx-quotes': [ERROR, 'prefer-single'],
 		'global-require': OFF,
 	},
 }
