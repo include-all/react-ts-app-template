@@ -8,20 +8,6 @@
 		"build": "cross-env NODE_ENV=production webpack --config ./scripts/config/webpack.prod.js",
 		"lint-eslint": "eslint --fix -c .eslintrc.js --ext .ts,.tsx,.js src"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged",
-			"commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
-		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx,js}": [
-			"eslint --config .eslintrc.js src"
-		],
-		"*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
-			"prettier --write"
-		]
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/include-all/react-ts-app-template.git"
