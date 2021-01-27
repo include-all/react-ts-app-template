@@ -11,7 +11,7 @@ function App(props: IProps) {
 	const { name, age } = props
 	return (
 		<div className="app">
-			<span>{`测试1=>我是${name}: ${age}岁`}</span>
+			<span>{`测试2=>我是${name}: ${age}岁`}</span>
 		</div>
 	)
 }
