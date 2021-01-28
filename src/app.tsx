@@ -1,19 +1,11 @@
-import './a.less'
-
 import React from 'react'
 
-interface IProps {
-	name: string
-	age: number
-}
+import WrapRoute from './router/index'
 
-function App(props: IProps) {
-	const { name, age } = props
-	return (
-		<div className="app">
-			<span>{`测试3=>我是${name}: ${age}岁`}</span>
-		</div>
-	)
-}
+const App = () => (
+	<div className="page">
+		<WrapRoute />
+	</div>
+)
 
 export default App
