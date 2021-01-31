@@ -1,7 +1,8 @@
 {
-	"name": "react-ts-app-template",
+	"name": "{{name}}",
 	"version": "1.0.0",
-	"description": "base on https://juejin.cn/post/6860129883398668296",
+	"description": "{{description}}",
+	"author": "{{author}}",
 	"main": "index.js",
 	"scripts": {
 		"start": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/config/webpack.dev.js",
@@ -10,15 +11,20 @@
 	},
 	"husky": {
 		"hooks": {
+			"pre-commit": "lint-staged",
 			"commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
 		}
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js}": [
+			"eslint --config .eslintrc.js src"
+		]
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/include-all/react-ts-app-template.git"
 	},
 	"keywords": [],
-	"author": "",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/include-all/react-ts-app-template/issues"
