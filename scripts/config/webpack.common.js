@@ -1,4 +1,6 @@
-const { resolve } = require('path')
+const path = require('path')
+
+const { resolve } = path
 
 // plugin
 // js注入html模板
@@ -56,7 +58,7 @@ module.exports = {
 		app: resolve(PROJECT_PATH, './src/index.tsx'),
 	},
 	output: {
-		filename: `js/[name]${isDev ? '' : '.[hash:8]'}.js`,
+		filename: `js/[name]${isDev ? '' : '.[chunkhash:8]'}.js`,
 		path: resolve(PROJECT_PATH, './dist'),
 	},
 	resolve: {
@@ -70,12 +72,14 @@ module.exports = {
 	optimization: {
 		splitChunks: {
 			chunks: 'all',
-			name: 'vendor',
 		},
 		minimizer: [
 			// terser
 			!isDev && new OptimizeCssAssetsPlugin(),
 		].filter(Boolean),
+	},
+	performance: {
+		hints: false,
 	},
 	module: {
 		rules: [

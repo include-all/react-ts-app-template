@@ -16,9 +16,9 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx,js}": [
-			"eslint --config .eslintrc.js"
+			"eslint --config .eslintrc.js src"
 		],
-		"/src/**/*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
+		"*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
 			"prettier --write"
 		]
 	},
@@ -49,6 +49,7 @@
 		"@commitlint/config-conventional": "^11.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
+		"@types/react-redux": "^7.1.16",
 		"@types/react-router-dom": "^5.1.7",
 		"@types/webpack-env": "^1.16.0",
 		"@typescript-eslint/eslint-plugin": "^4.14.0",
@@ -100,6 +101,8 @@
 		"axios": "^0.21.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
-		"react-router-dom": "^5.2.0"
+		"react-redux": "^7.2.2",
+		"react-router-dom": "^5.2.0",
+		"redux": "^4.0.5"
 	}
 }
