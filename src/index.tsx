@@ -5,12 +5,12 @@ import App from './app'
 import store from './store'
 
 if (module && module.hot) {
-	module.hot.accept()
+  module.hot.accept()
 }
 
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.querySelector('#root'),
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root'),
 )

@@ -1,7 +1,9 @@
+# 跨编辑器维护一致编码风格的配置文件
+# 编辑器配置。用于覆盖编辑器默认配置，以确保不同编辑器之间，代码格式的统一。
 root = true
 
 [*]
-indent_style = tab
+indent_style = space
 indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = true
@@ -10,3 +12,6 @@ end_of_line = lf
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.{js,jsx,ts,tsx}]
+quote_type = single
